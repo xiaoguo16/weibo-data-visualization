@@ -1,0 +1,37 @@
+.sourcetext{
+    font-size:20;
+    font-weight:2;
+    fill:black;
+}
+.sourcetext{
+    font-size:20;
+    font-weight:2;
+    fill:#6495ED;
+}
+.axis path,.axis line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+    shape-rendering: crispEdges;
+}
+.line {
+    fill: none;
+    stroke:#6495ED;
+    stroke-width: 2.5px;
+}
+#hotuser li{
+    border-bottom:1px solid #a9bacb;
+    font-size:2em;
+    margin-top:5px;
+}
+#hotuser li:hover{border : 2px solid #3399CC;padding:1px;background:#B0C4DE;}
+#hottopic li:hover{border : 2px solid #3399CC;padding:1px;background:#B0C4DE;}
+#hottopic li{
+    border-bottom:1px solid #a9bacb;
+    font-size:2em;
+    margin-top:5px;
+}
+.loading{
+    padding-left:20px;
+    line-height:20px;
+}

@@ -1,0 +1,33 @@
+.axis path,.axis line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+    shape-rendering: crispEdges;
+}
+.line {
+    fill: none;
+    stroke:#6495ED;
+    stroke-width: 2.5px;
+}
+.node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.node {
+    font: 10px sans-serif;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+.domain,.tick line{
+    display:none;
+}
+.loading{
+    padding-left:20px;
+    line-height:20px;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="text/javascript" src="javascripts/line.d3.v3.js"></script>
+    <script src="javascripts/jquery-1.11.2.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/easyui.css" />
+    <script type="text/javascript" src="javascripts/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="javascripts/dataweibo.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <title>新浪微博数据分析</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="top-nav row">
+        <div class="title col-xs-10">
+            <div class="navbar-header">
+                <a href="##" class="navbar-brand" style="color:white">新浪微博数据分析</a>
+            </div>
+            <div class="navbar-header">
+                <a href="htmls/treecontact.html" class="navbar-brand" style="color:#8A8A8A" onmouseover="this.style.cssText='color:white'" onmouseout="this.style.cssText='color:#8A8A8A'">级联转发分析</a>
+            </div>
+            <div class="navbar-header">
+                <a href="htmls/cloud.html" class="navbar-brand" style="color:#8A8A8A" onmouseover="this.style.cssText='color:white'" onmouseout="this.style.cssText='color:#8A8A8A'">文本分析</a>
+            </div>
+        </div>
+        <div class="select col-xs-2" style="position:relative;" id="mo">
+            <h3 >
+                <a onmouseover="javascript:chinamap();" >选择省份: </a>
+                <a id="province"></a>
+            </h3>
+            <div id="mapwindow" style="display:none;position:absolute;right:2px;top:55px;z-index:99;background:white;border:1px solid black;">
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div id="dialog" style="display:none;position:absolute;right:50%;top:35%;z-index:99;">
+            <div class="loading">
+                <img src="picture/jindu.gif" height="50" width="50"/>
+                玩命加载中...
+            </div>
+        </div>
+        <div class="side-nav col-xs-2">
+            <ul class="category">
+                <li onClick="show(this)"><a href="#">用户信息比例</a></li>
+                <li onClick="show(this)"><a href="#">消息来源、发布时间</a></li>
+                <li onClick="show(this)"><a href="#">热门用户、热门话题</a></li>
+            </ul>
+        </div>
+
+        <div class="content col-xs-10">
+            <div class="content-inner" id="div1">
+                <div class="figure">
+                    <div class="figure-title" >
+                        <h4>男性用户与女性用户</h4>
+                    </div>
+                    <div class="figure-content" id="pie1">
+                    </div>
+                </div>
+
+                <div class="figure">
+                    <div class="figure-title">
+                        <h4>认证用户与普通用户</h4>
+                    </div>
+                    <div class="figure-content" id="pie2">
+                    </div>
+                </div>
+
+                <div class="figure">
+                    <div class="figure-title">
+                        <h4>转发微博与原创微博</h4>
+                    </div>
+                    <div class="figure-content" id="pie3">
+                    </div>
+                </div>
+            </div>
+            <div class="content-inner" id="div2">
+                <div class="figure">
+                    <div class="figure-title" >
+                        <h4>微博来源</h4>
+                    </div>
+                    <div class="figure-content" id="source">
+                    </div>
+                </div>
+                <div class="figure">
+                    <div class="figure-title" >
+                        <h4>发布时间</h4>
+                    </div>
+                    <div class="figure-content" id="time">
+                    </div>
+                </div>
+            </div>
+            <div class="content-inner" id="div3">
+                <div class="figure">
+                    <div class="figure-title" >
+                        <h4>热门用户</h4>
+                    </div>
+                    <div class="figure-content" id="hotuser">
+                        <ul class="category">
+                            <li id="hotuser1"><a href="#"></a></li>
+                            <li id="hotuser2"><a href="#"></a></li>
+                            <li id="hotuser3"><a href="#"></a></li>
+                            <li id="hotuser4"><a href="#"></a></li>
+                            <li id="hotuser5"><a href="#"></a></li>
+                            <li id="hotuser6"><a href="#"></a></li>
+                            <li id="hotuser7"><a href="#"></a></li>
+                            <li id="hotuser8"><a href="#"></a></li>
+                            <li id="hotuser9"><a href="#"></a></li>
+                            <li id="hotuser10"><a href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="figure">
+                    <div class="figure-title" >
+                        <h4>热门话题</h4>
+                    </div>
+                    <div class="figure-content" id="hottopic">
+                        <ul class="category">
+                            <li id="hottopic1"><a href="#"></a></li>
+                            <li id="hottopic2"><a href="#"></a></li>
+                            <li id="hottopic3"><a href="#"></a></li>
+                            <li id="hottopic4"><a href="#"></a></li>
+                            <li id="hottopic5"><a href="#"></a></li>
+                            <li id="hottopic6"><a href="#"></a></li>
+                            <li id="hottopic7"><a href="#"></a></li>
+                            <li id="hottopic8"><a href="#"></a></li>
+                            <li id="hottopic9"><a href="#"></a></li>
+                            <li id="hottopic10"><a href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer row">
+        <p><img src="picture/xidian.jpg" height="30" width="30"/>西安电子科技大学社交大数据分析组</p>
+    </div>
+</div>
+<script>
+    function index(){
+        window.location.href='../html1/主页/index.html';
+    }
+    function tiao(){
+        window.location.href='treecontact.html';
+    }
+    function wenben(){
+        window.location.href='cloud.html';
+    }
+    $().ready(function (){
+        $("#mo").mouseover(function(){
+            $("#mapwindow").show();
+        });
+        $("#mapwindow").mouseover(function(){
+            $("#mapwindow").show();
+        });
+        $("#mo").mouseout(function(){
+            $("#mapwindow").hide();
+        });
+        $("#mapwindow").mouseout(function(){
+            $("#mapwindow").hide();
+        });
+    });
+    function show(a){
+        var arrayli=$(".category").children("li");
+        var arraydiv=$(".content-inner");
+        for(var i=0;i<arrayli.length;i++){
+            if(arrayli[i]==a){
+                //给li加class属性 active
+                $(arrayli[i]).children("a").addClass("active");
+                //div show hide
+                for(var j=0;j<arraydiv.length;j++){
+                    if(i==j){
+                        $(arraydiv[j]).show();
+                    }else{
+                        $(arraydiv[j]).hide();
+                    }
+                }
+            }else{
+                $(arrayli[i]).children("a").removeClass("active");
+            }
+        }
+    }
+</script>
+<script>
+    var arrayli1=$(".category").children("li");
+    $(arrayli1[0]).click();
+</script>
+</body>
+</html>

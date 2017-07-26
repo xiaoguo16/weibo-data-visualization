@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/main.css">
+<script src="../javascripts/jquery-1.11.2.js"></script>
+<script src="../javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="../javascripts/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../javascripts/jquery.easyui.min.js"></script>
+<script src="../javascripts/line.d3.v3.js"></script>
+<script src="../javascripts/cloud.js"></script>
+<link rel="stylesheet" href="../styles/cloud.css">
+</head>
+<body>
+<div class="container-fluid">
+	<div class="top-nav row">
+		<div class="title col-xs-12">
+			<div class="navbar-header">
+				<a href="../index.html" class="navbar-brand" style="color:#8A8A8A" onmouseover="this.style.cssText='color:white'" onmouseout="this.style.cssText='color:#8A8A8A'">新浪微博数据分析</a>
+			</div>
+			<div class="navbar-header">
+				<a href="treecontact.html" class="navbar-brand" style="color:#8A8A8A" onmouseover="this.style.cssText='color:white'" onmouseout="this.style.cssText='color:#8A8A8A'">级联转发分析</a>
+			</div>
+			<div class="navbar-header">
+				<a href="##" class="navbar-brand" style="color:white">文本分析</a>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="background:white;position:relative;">
+		<div id="dialog" style="display:none;position:absolute;right:50%;top:35%;z-index:99;">
+			<div class="loading">
+				<img src="../picture/jindu.gif" height="50" width="50"/>
+				玩命加载中...
+			</div>
+		</div>
+		<div class="content col-xs-8" id="content1">
+			<div class="content-inner">
+				<div class="figure-content">
+					<form class="form-inline">
+						<div class="form-group">
+							<label for="exampleInputName2">热门话题</label>
+							<input type="text" class="form-control" id="exampleInputName2" placeholder="请输入微博话题">
+						</div>
+						<button type="button" class="btn btn-default" onclick="wordcld()">查看</button>
+						<p style="font-size: 1px;line-height:2;font-style:oblique;">(示例：让红包飞 / 我是歌手/中国好声音/历史上的今天)</p>
+					</form>
+				</div>
+				<div class="figure-content" id="wordcld">
+				</div>
+				<div class="figure-content" id="line">
+				</div>
+				<div class="figure-content" id="line-text">
+				</div>
+			</div>
+		</div>
+		<div class="content col-xs-4">
+			<div class="content-inner">
+				<div class="figure-title" >
+					<h4>情感比例</h4>
+				</div>
+				<div class="figure-content" id="emotion" style="border:1px dotted #ccc">
+				</div>
+			</div>
+			<div class="content-inner">
+				<div class="figure-title" >
+					<h4>正面微博列举</h4>
+				</div>
+				<div class="figure-content" id="positive" style="border:1px dotted #ccc">
+					<ul class="category">
+						<li id="pos0"><a href="#"></a></li>
+						<li id="pos1"><a href="#"></a></li>
+						<li id="pos2"><a href="#"></a></li>
+						<li id="pos3"><a href="#"></a></li>
+						<li id="pos4"><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="content-inner">
+				<div class="figure-title" >
+					<h4>负面微博列举</h4>
+				</div>
+				<div class="figure-content" id="negative" style="border:1px dotted #ccc">
+					<ul class="category">
+						<li id="neg0"><a href="#"></a></li>
+						<li id="neg1"><a href="#"></a></li>
+						<li id="neg2"><a href="#"></a></li>
+						<li id="neg3"><a href="#"></a></li>
+						<li id="neg4"><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content col-xs-4">
+		</div>
+	</div>
+	<div class="footer row">
+		<p><img src="../picture/xidian.jpg" height="30" width="30"/>西安电子科技大学社交大数据分析组</p>
+	</div>
+</div>
+<script>
+	function index(){
+		window.location.href='../../index.html';
+	}
+	function tiao(){
+		window.location.href='treecontact.html';
+	}
+	function tiao2(){
+		window.location.href='weibo.html';
+	}
+</script>
+</body>
+</html>

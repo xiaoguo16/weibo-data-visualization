@@ -1,0 +1,85 @@
+body {
+	font-family: "Microsoft YaHei UI", Helvetica, Arial, sans-serif;
+	background-color: #EFEFEF;
+}
+
+a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+}
+
+.top-nav {
+	background-color: #333333;
+}
+
+.top-nav .title h3 {
+	margin: 20px;
+	color: #FFF;
+}
+
+.top-nav .select {
+	text-align: right;
+}
+
+.top-nav .select a {
+	color: #FFF;
+	font-size: 18px;
+}
+
+.side-nav {
+	background-color: #EFEFEF;
+	padding: 20px 0;
+}
+
+.side-nav ul {
+	padding: 0;
+	list-style: none;
+}
+
+.side-nav ul a {
+	display: block;
+	text-align: center;
+	padding: 10px 0;
+	font-size: 18px;
+}
+
+.side-nav ul a:hover, .side-nav ul a.active {
+	background-color: #E7E7E7;
+	border-right: solid #337AB7 5px;
+}
+
+.content {
+	background-color: #FFF;
+}
+
+.content-inner {
+	padding: 20px 0;
+	overflow: hidden;
+}
+
+.figure {
+	float: left;
+	width: 45%;
+	border: solid #E7E7E7 1px;
+	border-radius: 8px;
+	margin: 0 20px 10px 0;
+}
+
+.figure-title {
+	background-color: #E7E7E7;
+}
+
+.figure-title h4 {
+	margin: 0px;
+	padding: 10px 20px;
+}
+
+.figure-content {
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.footer p{
+	font-size: 18px;
+	text-align: center;
+	margin: 20px 0;
+}
