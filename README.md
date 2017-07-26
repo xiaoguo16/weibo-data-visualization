@@ -13,7 +13,7 @@ weibo-data-visualization
 ##### 图1：
 ![用户信息比例](https://github.com/xiaoguo16/weibo-data-visualization/blob/master/result/%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E6%AF%94%E4%BE%8B.png)  
 ##### 图2： 
-![消息来源](https://github.com/xiaoguo16/weibo-data-visualization/blob/master/result/%E7%BA%A7%E8%81%94%E8%BD%AC%E5%8F%91.png)  
+![消息来源](https://github.com/xiaoguo16/weibo-data-visualization/blob/master/result/%E6%B6%88%E6%81%AF%E6%9D%A5%E6%BA%90.png)  
 ##### 图3：
 ![级联转发分析](https://github.com/xiaoguo16/weibo-data-visualization/blob/master/result/%E7%BA%A7%E8%81%94%E8%BD%AC%E5%8F%91.png)  
 ##### 图4：
