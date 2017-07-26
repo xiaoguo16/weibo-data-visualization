@@ -11,13 +11,13 @@ weibo-data-visualization
      该部分主要针对某一热门话题进行分析;
      输入相应的微博热门话题名称，可获得该话题的高频词，展现方式为wordCloud，以及相应的情感比例等。
 ##### 图1：
-![一键搜索结果](https://github.com/xiaoguo16/network-data-visualization/blob/master/resultPics/searchResult.png)  
+![用户信息比例](https://github.com/xiaoguo16/weibo-data-visualization/blob/master/result/%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E6%AF%94%E4%BE%8B.png)  
 ##### 图2： 
-![力导图](https://github.com/xiaoguo16/network-data-visualization/blob/master/resultPics/correlation1.png)  
+![消息来源](https://github.com/xiaoguo16/weibo-data-visualization/blob/master/result/%E7%BA%A7%E8%81%94%E8%BD%AC%E5%8F%91.png)  
 ##### 图3：
-![捆图](https://github.com/xiaoguo16/network-data-visualization/blob/master/resultPics/correlation2.png)  
+![级联转发分析](https://github.com/xiaoguo16/weibo-data-visualization/blob/master/result/%E7%BA%A7%E8%81%94%E8%BD%AC%E5%8F%91.png)  
 ##### 图4：
-![IP分布](https://github.com/xiaoguo16/network-data-visualization/blob/master/resultPics/IP.png)  
+![文本分析](https://github.com/xiaoguo16/weibo-data-visualization/blob/master/result/%E6%96%87%E6%9C%AC%E5%88%86%E6%9E%90.png)  
 
 
 
